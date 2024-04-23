@@ -1,7 +1,13 @@
 ---
+import { type ImageMetadata } from 'astro';
+import {Image} from "astro:assets"
+
 interface Props {
     url: string;
-    image: string;
+    image: {
+        url: ImageMetadata;
+        alt: string;
+    };
     title: string;
     body: string;
 }
@@ -11,7 +17,8 @@ const { url, image, title, body } = Astro.props;
 <li class="card">
     <a class="card__link" href={url}>
         <div class="center">
-            <img class="card__img" width="226" height="127" src={image} alt="ProjectImage">
+            <Image style={{ maxWidth: '100%', maxHeight:'127px', width:'auto', height: 'auto' }} class="pro-img" src={image.url} alt={image.alt} />
+            <!-- <img class="card__img" width="226" height="127" src={image} alt="ProjectImage"> -->
         </div>
         <h3 class="card__title">
             {title}
