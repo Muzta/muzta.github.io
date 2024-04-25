@@ -1,0 +1,41 @@
+---
+import BaseLayout from './Layout.astro';
+import {Image} from "astro:assets"
+const { frontmatter } = Astro.props;
+---
+<BaseLayout pageTitle={frontmatter.title}>
+    <h2><a href={frontmatter.website} class="outer-link" target="_blank">{frontmatter.title}</a></h2>
+    <div class="certificate-text">
+        <slot /></div>
+        <h3>Certificates</h3>
+        <div class="list">
+            <ul>
+                {frontmatter.certificates.map((certificate) => 
+                    <li>
+                        <span>
+                            <a href={certificate.url} class="outer-link" target="_blank" >
+                                {certificate.stack}
+                            </a>
+                        </span>
+                    </li>
+                )}
+            </ul>
+        </div>
+    <!-- <ul class="badge__list">
+        <li><span class="badge badge--item">PLATFORM</span>{frontmatter.platform}</li>
+        <li><span class="badge badge--item">STACK</span>{frontmatter.stack}</li>
+        <li><span class="badge badge--item">CONTRIBUTION</span>{frontmatter.contribution}</li>
+        {frontmatter.website && <><li><span class="badge badge--item">WEBSITE</span><a class="badge__link" href={frontmatter.website} target="_blank">{frontmatter.website}</a></li></>}
+        <li><span class="badge badge--item">GITHUB</span><a class="badge__link" href={frontmatter.github} target="_blank">{frontmatter.github}</a></li>
+        <li><span class="badge badge--item">DATE</span>{frontmatter.date}</li>
+    </ul>
+    <div class="center">
+        {frontmatter.workImages && frontmatter.workImages.map(image => <Image class="pro-img" src={image.url} alt={image.alt} />)}
+        {frontmatter.videoDemo && 
+            <div class="iframe-container">
+                <iframe class="responsive-iframe" width="560" height="315" src={frontmatter.videoDemo} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        }
+    </div> -->
+</BaseLayout>
+

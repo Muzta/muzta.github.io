@@ -28,6 +28,31 @@ const projectsCollection = defineCollection({
     }),
 });
 
+const educationCollection = defineCollection({
+  type: "content",
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      description: z.string(),
+      certificates: z.array(
+        z.object({
+          stack: z.string(),
+          url: z.string(),
+        })
+      ),
+      website: z.string().optional(),
+      educationImages: z
+        .array(
+          z.object({
+            url: image(),
+            alt: z.string(),
+          })
+        )
+        .optional(),
+    }),
+});
+
 export const collections = {
   projects: projectsCollection,
+  education: educationCollection,
 };

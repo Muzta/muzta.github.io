@@ -7,8 +7,10 @@
   --text-light: #1e1e2e;
   --text-link: #78c2ad;
   --underline: #375a7f;
-  --header: "Goudy Old Style", "Garamond", "Big Caslon";
-  --body: "Goudy Old Style", "Garamond", "Big Caslon";
+  --header: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+    "DejaVu Sans Mono", monospace;
+  --body: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+    "DejaVu Sans Mono", monospace;
 }
 
 html {
@@ -53,6 +55,17 @@ p {
 small,
 li {
   font-family: var(--body);
+}
+
+.profile-info {
+  text-align: center;
+}
+
+.profile-picture {
+  max-height: 260px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
 }
 
 /* Navigation Bar */
@@ -358,6 +371,7 @@ html.light {
   height: 100%;
 }
 
+/* List style */
 .list {
   position: relative;
 }
@@ -402,6 +416,20 @@ html.light {
   transform: scaleX(1);
 }
 
+/* Links without style */
+.outer-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.outer-link::after {
+  content: " ⤴";
+}
+
+.certificate-text p {
+  font-size: 1rem;
+}
+
 /* Media Query */
 @media only screen and (max-width: 600px) {
   body {
@@ -420,9 +448,9 @@ html.light {
     text-align: center;
   }
 
-  h1 {
+  /* h1 {
     text-align: center;
-  }
+  } */
 
   .navbar__menu > a {
     margin: 0 11px;

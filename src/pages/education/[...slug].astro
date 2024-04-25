@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+import MarkdownEducationLayout from '../../layouts/MarkdownEducationLayout.astro';
+
+export async function getStaticPaths() {
+    const educationEntries = await getCollection('education');
+    return educationEntries.map(entry => ({
+        params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<MarkdownEducationLayout frontmatter={entry.data}>
+    <Content />
+</MarkdownEducationLayout>
+
