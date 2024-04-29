@@ -10,13 +10,8 @@ const pageTitle = "Education";
     <p>I completed my degree in Software Engineering from the University of Seville on 2022, which provided me with a solid foundation of knowledge. However, I believe in the importance of continous learning, so I am dedicated to expanding my skills with different resources. Here, I will showcase some of the certifications that may be the most relevant. </p>
     <div class="list">
         <ul>
+            <li style={{cursor: "auto"}}><span>B2 Trinity English</span></li>
             {allEducation.map((education) => <li><span><a href={`/education/${education.slug}/`} class="outer-link">{education.data.title}</a></span></li>)}
-          <!-- <li><span>Lorem ipsum dolor sit amet</span></li>
-          <li><span>Consectetur adipisicing elit</span></li>
-          <li><span>Ut labore et dolore magna aliqua</span></li>
-          <li><span>Ut enim ad minim veniam</span></li>
-          <li><span>Quis nostrud exercitation ullamco</span></li>
-          <li><span>Laboris nisi ut aliquip ex</span></li> -->
         </ul>
     </div>
 </Layout>

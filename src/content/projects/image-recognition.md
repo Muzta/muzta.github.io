@@ -1,6 +1,6 @@
 ---
 title: "Image recognition"
-description: "Web application that identifies the game an image belongs to using CNNs. Final Degree Project for the university"
+description: "Web application utilizing CNNs to identify game images - Final Degree Project"
 image:
   url: "../../assets/cnns.svg"
   alt: "CNNs logo"

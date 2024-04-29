@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+const date = new Date();
+const isoDate = date.toISOString()
+const pageTitle = "Posts";
+---
+<Layout pageTitle={pageTitle}>
+    <h2>Experience</h2>
+    <p>I have a lot of experience as a Full-Stack developer, but I haven't had the opportunity to apply it in any job yet. My proactivity and eagerness to contribute will help me achieve it.</p>
+
+    <p>Other experiences I have include:</p>
+
+    <article class="experience">
+        <div class="header">
+            <h3>Tech monitor</h3>
+            <h4>💼 Grupo Studium</h4>
+            <h4>📅 <time datetime="2024-02">Feb 2024</time> - <time datetime={isoDate}>Present</time></h4>
+        </div>
+        <p>Teaching office tools and skills to seniors through interactive activities</p>
+    </article>
+
+    <article class="experience">
+        <div class="header">
+            <h3>PowerBI Developer</h3>
+            <h4>💼 Berger-Levrault</h4>
+            <h4>📅 <time datetime="2022-03">Mar 2022</time> - <time datetime="2022-05">May 2022</time></h4>
+        </div>
+        <p>Internship during my university studies where I developed management dashboards to assist in decision-making processes for the company.</p>
+    </article>
+</Layout>
+

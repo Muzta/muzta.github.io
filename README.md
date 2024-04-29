@@ -19,4 +19,4 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ## ☕ Template
 
-This website was built thanks to [Milky-Way](https://github.com/ttomczak3/Milky-Way) Astro template.
+This website was built thanks to [Milky-Way](https://github.com/ttomczak3/Milky-Way) Astro template by [ttomczak](https://github.com/ttomczak3).
