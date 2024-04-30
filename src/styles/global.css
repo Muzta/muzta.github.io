@@ -158,6 +158,10 @@ li {
 .badge__link {
   color: var(--text-link);
   text-decoration: none;
+  max-width: 100%;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .badge__link:hover {
@@ -464,10 +468,6 @@ html.light {
 
 .light .badge__link {
   color: var(--text-link);
-  max-width: 100%;
-  display: inline-block;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .iframe-container {
