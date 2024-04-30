@@ -11,7 +11,7 @@ const { frontmatter } = Astro.props;
                 {frontmatter.certificates.map((certificate) => 
                     <li>
                         <span>
-                            <a href={certificate.url} class="outer-link" target="_blank" >
+                            <a href={certificate.url} class="badge__link" target="_blank" >
                                 {certificate.stack}
                             </a>
                         </span>

@@ -24,6 +24,7 @@ body {
 }
 
 header {
+  width: calc(100% - (2 * auto));
   position: sticky;
   top: 0;
   z-index: 100;
@@ -94,7 +95,7 @@ li {
 
 .navbar__menu {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   font-family: var(--body);
   height: 3.5rem;
   text-align: right;
@@ -230,7 +231,10 @@ li {
 
 /* Skills */
 .skills {
-  margin-top: 8px;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  justify-content: center;
 }
 
 .skills__img {
@@ -249,7 +253,27 @@ li {
 
 .skills__alt {
   font-size: 0.8rem;
+  color: var(--background-light);
+}
+
+.light .skills__alt {
   color: var(--background);
+}
+
+.progress-bar {
+  height: 4px;
+  width: 80%;
+  margin: auto;
+  border-radius: 6px;
+  background: white;
+  border: 1px solid;
+}
+
+.progress-bar-fill {
+  display: block;
+  border-radius: 6px;
+  height: 100%;
+  background: var(--underline);
 }
 
 /* Experience container */
@@ -260,8 +284,8 @@ li {
   margin: 1.5rem 0;
   padding: 0.7rem;
   border-radius: 10px;
-  border: 2px solid var(--text);
-  box-shadow: 2px 2px 4px hsl(0 0% 0% / 20%);
+  border: 1px solid var(--text);
+  /* box-shadow: 2px 2px 4px hsl(0 0% 0% / 20%); */
 }
 
 .experience .header {
@@ -279,7 +303,7 @@ li {
 }
 
 .light .experience {
-  border: 2px solid var(--text-light);
+  border: 1px solid var(--text-light);
 }
 
 .light .experience h3 {
@@ -295,8 +319,8 @@ li {
   margin: 1.5rem 0;
   padding: 0.7rem;
   border-radius: 10px;
-  border: 2px solid var(--text);
-  box-shadow: 2px 2px 4px hsl(0 0% 0% / 20%);
+  border: 1px solid var(--text);
+  /* box-shadow: 2px 2px 4px hsl(0 0% 0% / 20%); */
 }
 
 .certificates h3 {
@@ -304,7 +328,7 @@ li {
 }
 
 .light .certificates {
-  border: 2px solid var(--text-light);
+  border: 1px solid var(--text-light);
 }
 
 /* Items */
@@ -440,6 +464,10 @@ html.light {
 
 .light .badge__link {
   color: var(--text-link);
+  max-width: 100%;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .iframe-container {
