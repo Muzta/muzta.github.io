@@ -3,7 +3,7 @@ import BaseLayout from './Layout.astro';
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-    <h2><a href={frontmatter.website} class="outer-link" target="_blank">{frontmatter.title}</a></h2>
+    <h2>{frontmatter.title}</h2>
     <div class="certificates">
         <h3>Certificates</h3>
         <div class="list">

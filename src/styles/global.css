@@ -157,6 +157,7 @@ li {
 
 .badge__link {
   color: var(--text-link);
+  text-indent: 0;
   text-decoration: none;
   max-width: 100%;
   display: inline-block;
